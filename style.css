@@ -96,36 +96,28 @@ body {
   background-color: #ff5722;
   border-radius: 50%;
   position: absolute;
-  transform-origin: center;
+  transform-origin: 50% -150px; /* Setting transform origin to keep the planets in orbit */
 }
 
 .planet1 {
   animation: orbit1 10s linear infinite;
-  top: 50%;
-  left: calc(50% - 150px); /* Half of orbit1 diameter */
 }
 
 .planet2 {
   animation: orbit2 12s linear infinite;
-  top: 50%;
-  left: calc(50% - 200px); /* Half of orbit2 diameter */
 }
 
 .planet3 {
   animation: orbit3 14s linear infinite;
-  top: 50%;
-  left: calc(50% - 250px); /* Half of orbit3 diameter */
 }
 
 .planet4 {
   animation: orbit4 16s linear infinite;
-  top: 50%;
-  left: calc(50% - 300px); /* Half of orbit4 diameter */
 }
 
 .label {
   position: absolute;
-  top: 45px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
@@ -134,21 +126,21 @@ body {
 }
 
 @keyframes orbit1 {
-  0% { transform: rotate(0deg) translateX(150px); }
-  100% { transform: rotate(360deg) translateX(150px); }
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
 }
 
 @keyframes orbit2 {
-  0% { transform: rotate(0deg) translateX(200px); }
-  100% { transform: rotate(360deg) translateX(200px); }
+  0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
 }
 
 @keyframes orbit3 {
-  0% { transform: rotate(0deg) translateX(250px); }
-  100% { transform: rotate(360deg) translateX(250px); }
+  0% { transform: rotate(0deg) translateX(250px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(250px) rotate(-360deg); }
 }
 
 @keyframes orbit4 {
-  0% { transform: rotate(0deg) translateX(300px); }
-  100% { transform: rotate(360deg) translateX(300px); }
+  0% { transform: rotate(0deg) translateX(300px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(300px) rotate(-360deg); }
 }
