@@ -56,8 +56,38 @@ body {
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 60px #f7d843;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit1 {
+  width: 300px;
+  height: 300px;
+}
+
+.orbit2 {
+  width: 400px;
+  height: 400px;
+}
+
+.orbit3 {
+  width: 500px;
+  height: 500px;
+}
+
+.orbit4 {
+  width: 600px;
+  height: 600px;
 }
 
 .planet {
@@ -66,20 +96,59 @@ body {
   background-color: #ff5722;
   border-radius: 50%;
   position: absolute;
-  animation: orbit 10s linear infinite;
+  transform-origin: center;
 }
 
 .planet1 {
-  top: 30%;
-  left: 20%;
+  animation: orbit1 10s linear infinite;
+  top: 50%;
+  left: calc(50% - 150px); /* Half of orbit1 diameter */
 }
 
 .planet2 {
-  top: 70%;
-  left: 50%;
+  animation: orbit2 12s linear infinite;
+  top: 50%;
+  left: calc(50% - 200px); /* Half of orbit2 diameter */
 }
 
-@keyframes orbit {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.planet3 {
+  animation: orbit3 14s linear infinite;
+  top: 50%;
+  left: calc(50% - 250px); /* Half of orbit3 diameter */
+}
+
+.planet4 {
+  animation: orbit4 16s linear infinite;
+  top: 50%;
+  left: calc(50% - 300px); /* Half of orbit4 diameter */
+}
+
+.label {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+@keyframes orbit1 {
+  0% { transform: rotate(0deg) translateX(150px); }
+  100% { transform: rotate(360deg) translateX(150px); }
+}
+
+@keyframes orbit2 {
+  0% { transform: rotate(0deg) translateX(200px); }
+  100% { transform: rotate(360deg) translateX(200px); }
+}
+
+@keyframes orbit3 {
+  0% { transform: rotate(0deg) translateX(250px); }
+  100% { transform: rotate(360deg) translateX(250px); }
+}
+
+@keyframes orbit4 {
+  0% { transform: rotate(0deg) translateX(300px); }
+  100% { transform: rotate(360deg) translateX(300px); }
 }
