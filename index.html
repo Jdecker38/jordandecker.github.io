@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar System Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordan's Space Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="header">
-        <h1>Welcome to the Solar System</h1>
-        <nav>
-            <ul>
-                <li><a href="#" class="planet-link" data-planet="earth">Earth</a></li>
-                <li><a href="#" class="planet-link" data-planet="mars">Mars</a></li>
-                <li><a href="#" class="planet-link" data-planet="jupiter">Jupiter</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="sidebar">
+    <div class="explore-button">Explore</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact Info</a></li>
+      </ul>
+    </nav>
+  </div>
 
-    <!-- Canvas for the Solar System -->
-    <canvas id="solar-system"></canvas>
+  <div class="space-scene">
+    <div class="sun"></div>
+    <div class="planet planet1"></div>
+    <div class="planet planet2"></div>
+    <!-- Add more planets here -->
+  </div>
 
-    <!-- Modal for Planet Information -->
-    <div id="planet-info" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2 id="planet-title"></h2>
-            <p id="planet-description"></p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
